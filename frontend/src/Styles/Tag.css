@@ -1,0 +1,17 @@
+.Tag-box {
+    display: inline-flex;
+    justify-self: center;
+    text-align: center;
+    padding: 0 12px;
+    border-radius: 30px;
+    background-color: var(--tag-box-background-color);
+}
+.Tag-box > a {
+    color: var(--tag-text-color);
+    text-decoration: none;
+    cursor: default;
+}
+.Tag-box > a > p {
+    font-size: 1.25rem;
+    margin: 0.5vh 0;
+}

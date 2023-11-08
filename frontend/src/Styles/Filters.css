@@ -1,0 +1,42 @@
+.filters-main{
+    height: auto;
+    width: 100%;
+}
+.filters-body {
+    height: auto;
+    width: 100%;
+    /* position: fixed;
+    top: 25vh;
+    width: 30%; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-row-gap: 1.5vh;
+    justify-content: center;
+    text-align: center;
+    padding: 1vh 0;
+}
+.filters-body > p, .Tag-box, .Tag-box > a > p {
+    height: auto;
+    width: auto;
+}
+.filters-body > p {
+    font-size: 1.45rem;
+    color: var(--tag-text-color);
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+
+    .filters-body {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh;
+        justify-content: center;
+        text-align: center;
+        padding: 1vh 0;
+    }
+
+} 

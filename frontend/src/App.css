@@ -1,0 +1,188 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main-color{
+  color: var(--main-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f7ede2;
+  height: 50px;
+}
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+
+.search-container input[type="text"] {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+
+.search-container img {
+  width: 20px;
+  height: 20px;
+}
+
+
+.sign-out {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.sign-out:hover {
+  background-color: #e6e6e6;
+}
+
+
+.image-container img {
+  width: 100%;  /* This ensures the image stretches to the full width of its container */
+  display: block;  /* This removes any default margins or padding around the image */
+}
+
+
+/* ... Existing styles ... */
+
+
+.post-form {
+  width: 100%;
+  padding: 40px;
+  max-width: 90%;
+
+
+}
+
+
+.post-form input[type="text"], .post-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+}
+
+
+.top-inputs{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+
+}
+
+
+#titlebox{
+  width: 75%;
+  height: 25px;
+  background-color: #d9d9d9;
+}
+
+
+#Dish-Origin{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+ 
+ 
+}
+
+
+.side-inputs {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+#Description{
+  width: 75%;
+  height: 200px;
+  background-color: #d9d9d9;
+}
+
+
+#category{
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin: auto;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+}
+
+
+.bottom-inputs{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+#Contents{
+  width: 75%;
+  height: 200px;
+  background-color: #d9d9d9;
+}
+
+
+
+
+
+
+#files{
+  width: 20%;
+  height: 200px;
+  background-color: #d9d9d9;
+}
+
+
+.side-inputs input, .side-inputs select {
+  width: 48%; /* To give space between the inputs */
+}
+
+
+.post-form input[type="file"] {
+  margin-top: 20px;
+}
+
+
+.post-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #a47551;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+.post-button:hover {
+  background-color: #8f5c3c;
+}
+
+.no-decor{
+  text-decoration: none;
+}

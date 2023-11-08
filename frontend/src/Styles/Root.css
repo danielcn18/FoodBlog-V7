@@ -1,0 +1,28 @@
+:root{
+    --background-color: white;
+    --theme-background-color: #B07249;
+    --theme-faded-background-color: #d9d9d9f1;
+    --main-color: black;
+    --second-color: white;
+    --main-font-famiy: Arial, Helvetica, sans-serif;
+    --background-color-image: #E7E7E7;
+    --mini-blog-height: 20rem;
+    --mini-blog-widht: 20rem;
+    --mini-blog-background-color: var(--background-color-image);
+    --mini-blog-title-color: #D6A280;
+    --mini-blog-read-more-color: #C1A390;
+    --footer-background-color: #B3917A;
+    --footer-icons-size: 21px;
+    --footer-hover-color: #bb8564;
+    --tag-box-background-color: #D9D9D9;
+    --tag-text-color: var(--main-color); 
+    --blog-box-background-color: #F6F6F6;
+    --mini-tag-text-color: var(--main-color);
+    --mini-tag-text-background-color: #D9D9D9;
+    --blog-box-padding: 0.6rem;
+    --login-form-background-color: #D2C4BC;
+    --login-signup-background-color: #D9D9D9;
+    --login-signup-outer-color: var(--main-color);
+    --login-signup-inner-color: var(--second-color);
+    --form-animation-block-background-color: #DD8D8D;
+}

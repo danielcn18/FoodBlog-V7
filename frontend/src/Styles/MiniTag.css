@@ -1,0 +1,14 @@
+.blog-box-date-tags > .mini-tag-body {
+    padding: 0.12rem 0.32rem;
+    border-radius: 6.5px;
+    background-color: var(--mini-tag-text-background-color);
+}
+.mini-tag-body > a > .mini-tag-text {
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--mini-tag-text-color);
+}
+.mini-tag-body > a {
+    text-decoration: none;
+    cursor: default;
+}
