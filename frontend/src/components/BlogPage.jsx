@@ -32,6 +32,7 @@ function BlogPage() {
               setUser(result.data.data);
             })
             .catch((error) => {
+              console.log(blog._id)
               console.log(error);
             });
 
