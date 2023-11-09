@@ -7,7 +7,7 @@ import '../Styles/Root.css'
 import sampleImg from '../Images/steak.png';
 
 function IndBlogPage() {
-  let params= useParams();
+  let params = useParams();
   const [blog, setBlog] = useState([]);
   const [user, setUser] = useState([]);
   

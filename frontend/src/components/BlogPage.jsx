@@ -6,7 +6,7 @@ import Filters from './Filters';
 
 function BlogPage() {
 
-  const [userForm, setUserForm] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
   const [user, setUser] = useState([]);
 
@@ -14,7 +14,7 @@ function BlogPage() {
     axios
       .get("http://localhost:5000/blogs/")
       .then((res) => {
-        setUserForm(res.data.data.reverse());
+        setBlogs(res.data.data.reverse());
       })
       .catch((error) => {
         console.log(error);
@@ -25,7 +25,7 @@ function BlogPage() {
   return (
     <div className="blog-grid">
       <div className="blog-section-body">
-        {userForm.map((blog) => {
+        {blogs.map((blog) => {
           axios 
             .get("http://localhost:5000/blogs/profile/" + blog._id)
             .then((result) => {

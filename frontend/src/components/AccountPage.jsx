@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import '../Styles/BlogAccount.css';
+import '../Styles/AccountPage.css';
 import '../Styles/Root.css';
-import defaultPfp from '../Images/Default_pfp.svg.png'
+import defaultPfp from '../Images/Default_pfp.svg.png';
 
-export default function BlogAccount() {
+export default function AccountPage() {
   const [user, setUser] = useState([]);
   const [tempBlogs, setTempBlogs] = useState([]);
   const [blogs, setBlogs] = useState([]);

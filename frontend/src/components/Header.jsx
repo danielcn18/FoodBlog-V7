@@ -3,9 +3,9 @@ import { Routes, Route, Link } from "react-router-dom";
 import '../Styles/Header.css';
 import '../Styles/Root.css';
 import logo from '../Images/World_Kitchen_Wonders_logos_black.png';
-import icon1 from '../../public/instagram_icon.png'
-import icon2 from '../../public/facebook_logo.png'
-import icon3 from '../../public/twitter_icon.png'
+import icon1 from '../public/instagram_icon.png'
+import icon2 from '../public/facebook_logo.png'
+import icon3 from '../public/twitter_icon.png'
 
 export default function Header({user, setUser}) {
   const [show, setShow] = useState(false);

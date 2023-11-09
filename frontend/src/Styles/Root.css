@@ -26,3 +26,7 @@
     --login-signup-inner-color: var(--second-color);
     --form-animation-block-background-color: #DD8D8D;
 }
+.td-none {
+    text-decoration: none;
+    color: var(--main-color);
+}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Routes, Route, Link } from "react-router-dom";
 import "../Styles/Createblog.css"
-import img1 from '../../public/food.jpg'
+import img1 from '../public/food.jpg'
 
 
 function CreateBlg({user}) {
