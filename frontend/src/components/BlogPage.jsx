@@ -7,45 +7,33 @@ import Filters from './Filters';
 function BlogPage() {
 
   const [blogs, setBlogs] = useState([]);
-
-  const [user, setUser] = useState([]);
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/blogs/")
-      .then((res) => {
-        setBlogs(res.data.data.reverse());
+      .get("http://localhost:5000/blogs/latest")
+      .then((result) => {
+        setBlogs(result.data.data.reverse());
+        setUsers(result.data.users.reverse());
       })
       .catch((error) => {
         console.log(error);
       });
-          
   }, []);
 
   return (
     <div className="blog-grid">
       <div className="blog-section-body">
-        {blogs.map((blog) => {
-          axios 
-            .get("http://localhost:5000/blogs/profile/" + blog._id)
-            .then((result) => {
-              setUser(result.data.data);
-            })
-            .catch((error) => {
-              console.log(blog._id)
-              console.log(error);
-            });
-
+        {blogs.map((blog, index) => {
           const year = blog.createdAt.slice(0, 4),
             month = blog.createdAt.slice(5, 7),
             day = blog.createdAt.slice(8, 10);
-
           return (
             // <Link className="td-none" /* to={`/view-indblog/${blog._id}`} */>
             <div className="blog-box-main" >
               <div className="blog-box">
                 <div className="blog-box-info">
-                  <Link className="td-none" to={`/view-profile/${user._id}`}>
+                  <Link className="td-none" to={`/view-profile/${users[index]._id}`}>
                     <p className="blog-box-username">{blog.author}</p>
                   </Link>
                   <p className="blog-box-title">{blog.title}</p>

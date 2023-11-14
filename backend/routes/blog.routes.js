@@ -21,6 +21,58 @@ router.route("/").get(async (req, res, next) => {
     });
 });
 
+/*  */
+router.route("/latest").get(async (req, res, next) => {
+  try {
+    const foodResults = await foodSchema.find();
+    
+    const userPromises = foodResults.map(async (e) => {
+      const otherResult = await userSchema.findOne({ username: e.author });
+      return otherResult;
+    });
+
+    const users = await Promise.all(userPromises);
+
+    res.json({
+      data: foodResults,
+      users: users,
+      message: "All items successfully fetched",
+      status: 200,
+    });
+  } catch (err) {
+    return next(err);
+  }
+});
+
+/* old /latest route (had problems b/c of async & await; promises) */
+// router.route("/latest").get(async (req, res, next) => {
+//   await foodSchema
+//     .find()
+//     .then((result) => {
+//       const users = [];
+//       result.forEach((e) => {  
+//         userSchema
+//           .findOne({ username: e.author})
+//           .then((otherResult) => {
+//             users.push(otherResult);
+//           })
+//           .catch(err => {
+//             return next(err);
+//           });
+//       });
+//       console.log(users)
+//       res.json({
+//         data: result,
+//         users: users,
+//         message: "All items successfully fetched",
+//         status: 200,
+//       });
+//     })
+//     .catch(err => {
+//       return next(err);
+//     });
+// });
+
 router.route("/Indblog/:blogId").get(async (req, res, next) => {
   const food = req.params.blogId;
   await foodSchema
