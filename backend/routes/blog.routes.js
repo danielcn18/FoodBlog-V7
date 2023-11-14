@@ -25,12 +25,10 @@ router.route("/").get(async (req, res, next) => {
 router.route("/latest").get(async (req, res, next) => {
   try {
     const foodResults = await foodSchema.find();
-    
     const userPromises = foodResults.map(async (e) => {
       const otherResult = await userSchema.findOne({ username: e.author });
       return otherResult;
     });
-
     const users = await Promise.all(userPromises);
 
     res.json({

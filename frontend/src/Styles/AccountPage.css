@@ -170,6 +170,27 @@
     }
 }
 
+.blog-account-post-title{
+    margin: 7px 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--mini-blog-title-color);
+    word-wrap: break-word;
+    
+    overflow: hidden;
+    max-height:50px;
+}
+.blog-account-post-description{
+    margin: 6px 0 0 0;
+    font-size: 1.2rem;
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    max-height: 45px;
+}
+
 /* white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;

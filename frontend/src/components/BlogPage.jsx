@@ -28,29 +28,32 @@ function BlogPage() {
           const year = blog.createdAt.slice(0, 4),
             month = blog.createdAt.slice(5, 7),
             day = blog.createdAt.slice(8, 10);
-          return (
-            // <Link className="td-none" /* to={`/view-indblog/${blog._id}`} */>
-            <div className="blog-box-main" >
-              <div className="blog-box">
-                <div className="blog-box-info">
-                  <Link className="td-none" to={`/view-profile/${users[index]._id}`}>
+
+          if (users[index]) {
+            return (
+              // <Link className="td-none" /* to={`/view-indblog/${blog._id}`} */>
+              <div className="blog-box-main" key={index}>
+                <div className="blog-box">
+                  <div className="blog-box-info">
+                    <Link className="td-none" to={`/view-profile/${users[index]._id}`}>
                     <p className="blog-box-username">{blog.author}</p>
                   </Link>
-                  <p className="blog-box-title">{blog.title}</p>
-                  <p className="blog-box-description">{blog.description}</p>
-                  <Link className="mini-blog-read-more" to={`/view-indblog/${blog._id}`}>Read More</Link>
-                  <div className="blog-box-date-tags">
-                    <p className="blog-box-date">Date: {`${day}-${month}-${year}`}</p>
-                    {/* <MiniTag /> */}
+                    <p className="blog-box-title">{blog.title}</p>
+                    <p className="blog-box-description">{blog.description}</p>
+                    <Link className="mini-blog-read-more" to={`/view-indblog/${blog._id}`}>Read More</Link>
+                    <div className="blog-box-date-tags">
+                      <p className="blog-box-date">Date: {`${month}-${day}-${year}`}</p>
+                      {/* <MiniTag /> */}
+                    </div>
+                  </div>
+                  <div className="blog-box-image-body">
+                    <img src={blog.imageUrl} alt="post image" className="blog-box-image" />
                   </div>
                 </div>
-                <div className="blog-box-image-body">
-                  <img src={blog.imageUrl} alt="post image" className="blog-box-image" />
-                </div>
               </div>
-            </div>
-            // </Link>
-          );
+              // </Link>
+            )
+          }
         })}
       </div>
 

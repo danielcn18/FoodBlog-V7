@@ -66,7 +66,6 @@ router.route("/profile/:userId").get(async (req, res, next) => {
                 .catch(err => {
                     return next(err);
                 });
-        // console.log("result: " + result);
         })
         .catch(err => {
         return next(err);
@@ -83,7 +82,6 @@ router.route("/find-profile-by-author/:author").get(async (req, res, next) => {
             message: "All items successfully fetched",
             status: 200,
         });
-        // console.log("result: " + result);
         })
         .catch(err => {
         return next(err);

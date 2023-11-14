@@ -39,21 +39,23 @@ function Home() {
         </div>
         <div className="news-show" id='scroll' >
           {blogs.map((blog, index) => {
-            /* const year = blog.createdAt.slice(0, 4),
+            const year = blog.createdAt.slice(0, 4),
               month = blog.createdAt.slice(5, 7),
-              day = blog.createdAt.slice(8, 10); */
+              day = blog.createdAt.slice(8, 10);
+
+          if(users[index]){
             return(
-              <div className="mini-blog-body">
+              <div className="mini-blog-body" key={index}>
                 <img className="mini-blog-image" src={blog.imageUrl} alt="mini blog img" />
                 <div className="mini-blog-more">
-                  <p className="mini-blog-date">Date: {/* {`${day}-${month}-${year}`} */}</p>
+                  <p className="mini-blog-date">Date: {`${month}-${day}-${year}`}</p>
                   <p className="mini-blog-username">{<Link className="td-none" to={`/view-profile/${users[index]._id}`}>{blog.author}</Link>}</p>
                   <p className="mini-blog-title">{blog.title}</p>
                   <p className="mini-blog-description">{blog.description}</p>
                   <Link className="mini-blog-read-more" to={`/view-indblog/${blog._id}`}>Read More</Link>
                 </div>
               </div>
-            );
+            )}
           })}
         </div>
       </div>

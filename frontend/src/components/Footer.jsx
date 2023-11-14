@@ -1,6 +1,6 @@
-import icon1 from '../public/instagram_icon.png'
-import icon2 from '../public/facebook_logo.png'
-import icon3 from '../public/twitter_icon.png'
+import icon1 from '../public/instagram_icon.png';
+import icon2 from '../public/facebook_logo.png';
+import icon3 from '../public/twitter_icon.png';
 
 export default function Footer() {
   return(

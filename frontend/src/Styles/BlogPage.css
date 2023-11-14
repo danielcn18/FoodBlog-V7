@@ -64,6 +64,7 @@
 .blog-box > .blog-box-info {
     height: auto;
     width: 100%;
+    max-width: 100%;
 }
 .blog-box-info > p, .blog-box-date {
     color: var(--tag-text-color);
@@ -77,10 +78,18 @@
 .blog-box-info > .blog-box-title {
     font-size: 1.4rem;
     margin: 0.45rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: inherit;
 }
 .blog-box-info > .blog-box-description {
     font-size: 0.95rem;
     margin: 0.4rem 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 550px;
 }
 .blog-box-info > .blog-box-date-tags {
     height: auto;

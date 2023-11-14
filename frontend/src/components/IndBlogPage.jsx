@@ -31,14 +31,16 @@ function IndBlogPage() {
 
   }, []);
 
-  return (
-    <div className="indblog-grid">
-      <img className="indblog-image" src={blog.imageUrl} />
-      <p className="indblog-title">{blog.title}</p>
-      <p className="indblog-credit">Written By {<Link className="td-none" to={`/view-profile/${user._id}`}>{blog.author}</Link>}</p>
-      <p className="indblog-description">{blog.description}</p>
-    </div>
-  );
+  if(user) {
+    return (
+      <div className="indblog-grid">
+        <img className="indblog-image" src={blog.imageUrl} />
+        <p className="indblog-title">{blog.title}</p>
+        <p className="indblog-credit">Written By {<Link className="td-none" to={`/view-profile/${user._id}`}>{blog.author}</Link>}</p>
+        <p className="indblog-description">{blog.description}</p>
+      </div>
+    );
+  }
 }
 
 export default IndBlogPage;
