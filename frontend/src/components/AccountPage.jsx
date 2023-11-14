@@ -8,10 +8,7 @@ import defaultPfp from '../Images/Default_pfp.svg.png';
 
 export default function AccountPage() {
   const [user, setUser] = useState([]);
-  const [tempBlogs, setTempBlogs] = useState([]);
   const [blogs, setBlogs] = useState([]);
-
-const [test, setTest] = useState([])
 
   let params = useParams();
 
@@ -20,24 +17,11 @@ const [test, setTest] = useState([])
       .get("http://localhost:5000/users/profile/" + params.userId)
       .then((result) => {
         setUser(result.data.data);
-        setTempBlogs(result.data.data.blogsIds);
+        setBlogs(result.data.blogs);
       })
       .catch((error) => {
         console.log(error);
       });
-
-    tempBlogs.map((blogID) => {
-      axios 
-        .get("http://localhost:5000/blogs/profile/" + blogID)
-        .then((result) => {
-          setTest((prev) => [
-            ...prev, result.data.data
-          ])
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    })
   }, []);
 
   return(
@@ -58,13 +42,14 @@ const [test, setTest] = useState([])
           <p>Blog Posts</p>
         </div>
         <div className="blog-account-posts">
-          {test.map((userBlog) => {
+          {blogs.map((blog) => {
+            console.log(blog)
             return(
               <div className="blog-account-post">
                 <img className="blog-account-post-img" />
                 <p className="blog-account-post-date">11/2/23</p>
-                <p className="blog-account-post-title">{ userBlog.title }</p>
-                <p className="blog-account-post-description">{ userBlog.description }</p>
+                <p className="blog-account-post-title">{ blog.title }</p>
+                <p className="blog-account-post-description">{ blog.description }</p>
               </div>
             );
           })}

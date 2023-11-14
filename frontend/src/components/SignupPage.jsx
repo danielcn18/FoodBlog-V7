@@ -23,7 +23,7 @@ function SignupPage() {
         await axios
             .get(`http://localhost:5000/users/validate/${userForm.email}`)
             .then(res => {
-                console.log(res.data.available);
+                // console.log(res.data.available);
                 if (!res.data.available) {
                     const input = document.getElementById('email');
                     input.setCustomValidity('Email already in use.');
@@ -35,7 +35,7 @@ function SignupPage() {
                     axios
                         .post("http://localhost:5000/users/signup", userForm)
                         .then((res) => {
-                            console.log(res.data);
+                            // console.log(res.data);
                             setUserForm({
                                 email: "",
                                 username: "",

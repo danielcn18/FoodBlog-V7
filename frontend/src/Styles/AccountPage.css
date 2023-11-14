@@ -1,5 +1,6 @@
 .blog-account-main {
     height: auto;
+    min-height: 41vh;
     width: 100%;
 }
 .blog-account-profile-background {

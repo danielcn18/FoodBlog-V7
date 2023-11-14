@@ -46,7 +46,7 @@ function CreateBlg({user}) {
     axios
       .post('http://localhost:5000/blogs/create-blog', blogForm)
       .then((res) => {
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setBlogForm({
           author: "",
           title:"",
