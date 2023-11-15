@@ -42,7 +42,7 @@ function BlogPage() {
                     <p className="blog-box-description">{blog.description}</p>
                     <Link className="mini-blog-read-more" to={`/view-indblog/${blog._id}`}>Read More</Link>
                     <div className="blog-box-date-tags">
-                      <p className="blog-box-date">Date: {`${month}-${day}-${year}`}</p>
+                      <p className="blog-box-date">Date Posted: {`${month}-${day}-${year}`}</p>
                       {/* <MiniTag /> */}
                     </div>
                   </div>

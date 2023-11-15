@@ -42,19 +42,18 @@ export default function AccountPage() {
           <p>Blog Posts</p>
         </div>
         <div className="blog-account-posts">
-          {blogs.map((blog) => {
-                 const year = blog.createdAt.slice(0, 4),
-                 month = blog.createdAt.slice(5, 7),
-                 day = blog.createdAt.slice(8, 10);
-            console.log(blog)
+          {blogs.map((blog, index) => {
+            const year = blog.createdAt.slice(0, 4),
+              month = blog.createdAt.slice(5, 7),
+              day = blog.createdAt.slice(8, 10);
+              console.log(blog);
             return(
-              <div className="blog-account-post">
+              <div className="blog-account-post" key={index}>
                 <img className="blog-account-post-img" src={blog.imageUrl} />
-                <p className="blog-account-post-date">Date: {`${month}-${day}-${year}`}</p>
+                <p className="blog-account-post-date">Date Posted: {`${month}-${day}-${year}`}</p>
                 <p className="blog-account-post-title">{ blog.title }</p>
                 <p className="blog-account-post-description">{ blog.description }</p>
                 <Link className="mini-blog-read-more" to={`/view-indblog/${blog._id}`}>Read More</Link>
-
               </div>
             );
           })}

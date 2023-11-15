@@ -30,14 +30,13 @@ export default function Header({user, setUser}) {
       >
         <div className="dropdown-column">
           <Link to={ user ? `/view-profile/${user._id}` : <Link to="/login" />}>Profile</Link>
-          <Link to={"/create-blog"}>Create Blog</Link>
-          {/* <button type="button">Log Out</button>
-          <button type="button">Delete Account</button> */}
+          <button type="button">Log Out</button>
+          <button type="button">Delete Account</button>
           {/* <Link to={"/"}>Log Out</Link> */}
         </div>
-        {/* <div className="dropdown-column">
+        <div className="dropdown-column">
           <Link to={"/create-blog"}>Create Blog</Link>
-        </div> */}
+        </div>
       </div>
     );
   }

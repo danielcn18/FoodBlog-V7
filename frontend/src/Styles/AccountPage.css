@@ -79,6 +79,7 @@
 .blog-account-post-img {
     height: 275px;
     width: 275px;
+    object-fit: cover;
     /* background-color: white; */
 }
 .blog-account-post-date {
